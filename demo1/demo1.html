@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head><title>Cards demo</title></head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/trontastic/jquery-ui.css">
+
+<script src="../libs/box2d.js"></script>
+<script src="../libs/jquery.mobile-events.min.js"></script>
+<script src="../libs/jquery.scrollTo.min.js"></script>
+
+<link href='card1.css' rel='stylesheet' type='text/css'>
+<script src="cardsDemo1.js"></script>
+
+
+
+<script> 
+  $(document).ready(function() {  
+	$.ajax({
+	  url: 'https://randomuser.me/api/?results=50',
+	  dataType: 'json',
+	  success: function(data){
+		openCards(data.results);
+	  }
+	});  
+
+  	function openCards(users) { 
+		for(var i=0;i<users.length;i++) {
+			var user=users[i].user;
+			var image=user.picture.medium;
+			var name=user.name.first+" "+user.name.last;
+			var contactData=user.email+"<br>"+user.phone+'<br>'+user.location.street+'<br>'+user.location.city;
+			var card=$('<div class="card ungroupedCard" id="card_'+i+'"><img src="'+image+'"><div class="text"><div class="name">'+name+'</div><div class="contactData">'+contactData+'</div></div></div>');
+			$("body").append(card);
+		}
+		$(".card").box2d({   collisionDetection:false });
+    }
+
+  });
+</script>
+<body>
+<div class="selectback">
+    <a class="nav_button on" href="#">&nbsp; Demo 1</a>  <a class="nav_button off" href="../demo2/demo2.html">&rarr; Demo 2</a> <a class="nav_button off" href="http://flyingdog.de/nhp/blog/cards/How_to_Cards_Desktop.php">&rarr; Article</a>
+    <span class="infotext">double click on card to zoom</span>
+</div>
+
+</body>
+</html>

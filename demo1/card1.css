@@ -1,0 +1,100 @@
+  .card {width: 160px; height: 60px; border: 1px solid #ddd;position: absolute; left: 0px;top:0;cursor:pointer;
+  background-color:white;
+  font-size: 10px;
+  }
+  .card:hover {
+  	 border: 1px solid #999 !important;  	 
+  }
+
+  .group { border: 1px solid #ddd;position: absolute; cursor:pointer;
+      background-color:#f0f0f0;
+      font-size: 10px;
+  }
+
+   .card img {
+   	margin-left:2%;
+   	margin-top:2%;
+   	width:auto;
+   	height:90%;
+   	overflow:hidden;
+   }
+  .shadow1 {
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24) !important;
+	}
+  .shadow2 {
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),2px 3px 4px rgba(0,0,0,.24) !important;
+	}  
+	.shadow3 {
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),4px 4px 4px rgba(0,0,0,.24) !important;
+	}	
+	.top {
+		z-index:1000 !important;
+	}	
+
+	.card .text {
+		position: absolute;
+		font-size:1em;
+		color:black;
+		left: 40%;
+		top: 0.4em;
+		font-family: "open Sans";
+		font-weight: 300;
+	}
+	.card .text .name {
+		text-transform: capitalize;
+	}	
+	.card .text .contactData {
+		text-transform: capitalize;
+		margin-top: 0.5em;
+		font-size:0.6em;
+		 line-height: 1.4em;
+	}		
+	.group_name {
+        border:0;
+        background: transparent;
+        text-transform: capitalize;
+        font-size:1em;
+        font-family: "open Sans";
+        font-weight: 300;
+    }
+    .group_name:hover {
+        border-bottom: 1px solid grey;
+    }
+	/*
+	without selectable plugin will not work (might be bug in jQuery UI)
+	*/
+	.selectback {
+		z-index:0;
+		position: fixed;
+		top:0px;
+		left:0;
+		width: 100%;
+		height: 100%;
+	}
+    /*
+    selected cards
+    */
+  .ui-selected,.ui-selecting {
+	  border: 1px solid blue !important;
+  }
+
+  .nav_button {
+      font-family: "open Sans";
+      font-weight: 300;
+      font-size:14px;
+      text-decoration: none;
+      padding: 4px;
+      margin: 0px;
+      color: #333;
+      display: inline-block;
+  }
+  .nav_button.on {
+      background-color: #02a9f4;
+  }
+.infotext {
+    font-family: "open Sans";
+    font-weight: 300;
+    font-size:12px;
+    line-height: 14px;
+    color: #999;
+}

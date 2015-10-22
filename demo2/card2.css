@@ -1,0 +1,73 @@
+body {
+    background-color: #f0f0f0;
+    margin:0;
+    padding:0;
+}
+
+.card {
+    width: 330px;
+    height: 350px;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    cursor: pointer;
+    background-color: white;
+    border: 1px transparent;
+    padding: 10px;
+    font-family: 'Indie Flower';
+    font-size: 24px;
+}
+
+.card:hover {
+    border: 1px solid #999 !important;
+}
+
+.pen {
+    width: 708px;
+    height: 67px;
+    background: none;
+    border: 0;
+    z-index: 10000 !important;
+
+}
+
+.shadow1 {
+    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 2px 3px 4px rgba(0, 0, 0, .24) !important;
+
+}
+
+.shadow2 {
+    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 4px 4px 4px rgba(0, 0, 0, .24) !important;
+
+}
+
+.shadow3 {
+    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 6px 6px 6px rgba(0, 0, 0, .24) !important;
+}
+
+.top {
+    z-index: 1000 !important;
+}
+
+
+.nav_button {
+    font-family: "open Sans";
+    font-weight: 300;
+    font-size:14px;
+    text-decoration: none;
+    padding: 4px;
+    margin: 0px;
+    color: #333;
+    display: inline-block;
+}
+.nav_button.on {
+    background-color: #02a9f4;
+}
+.infotext {
+    font-family: "open Sans";
+    font-weight: 300;
+    font-size:12px;
+    line-height: 14px;
+    color: #999;
+}

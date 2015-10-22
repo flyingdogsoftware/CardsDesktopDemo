@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head><title>Editable notes demo</title></head>
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="../libs/box2d.js"></script>
+<script src="../libs/jquery.scrollTo.min.js"></script>
+<script src="../libs/jquery.mobile-events.min.js"></script>
+
+<link href='card2.css' rel='stylesheet' type='text/css'>
+<script src="cardsDemo2.js"></script>
+
+
+
+<script> 
+  $(document).ready(function() {  
+
+    var num=1;
+  	function addCard(color,x,y,angle,text) {
+        var card=$('<div class="card" id="card_'+num+'" style="background-color:'+color+';" data-angle="'+angle+'"  contenteditable="true">'+text+'</div>');
+        card.css("left",x+"px");
+        card.css("top",y+"px");
+
+        $("body").append(card);
+        num++;
+    }
+
+
+      addCard("#ffeb3a",100,350,-0.3,"Yellow<br><br> Double click for editing");
+      addCard("#f44336",450,240,-0.3,"Red<br><br> Click on pen to underline selection");
+      addCard("#02a9f4",805,135,-0.3,"Light Blue");
+
+      var angle=-0.8;
+      var pen=$('<img class="pen" id="pen"  data-angle="'+angle+'" src="pen.png"  >');
+
+
+      $("body").append(pen);
+
+
+
+      $(".card,.pen").box2d({   collisionDetection:false });
+      $(".pen").on('mousedown',function() {
+          var test=document.execCommand('underline',false,true);
+      });
+  });
+</script>
+<body>
+<div>
+<a class="nav_button off" href="../demo1/demo1.html">&rarr; Demo 1</a>  <a class="nav_button on" href="#">&nbsp; Demo 2</a> <a class="nav_button off"  href="http://flyingdog.de/nhp/blog/cards/How_to_Cards_Desktop.php">&rarr; Article</a>
+</div>
+</body>
+</html>
