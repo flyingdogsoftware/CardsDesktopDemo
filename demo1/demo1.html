@@ -20,7 +20,7 @@
 <script> 
   $(document).ready(function() {  
 	$.ajax({
-	  url: 'https://randomuser.me/api/?results=50',
+	  url: 'http://www.flyingdog.de/nhp/blog/cards/files/randomuser.cache.json',
 	  dataType: 'json',
 	  success: function(data){
 		openCards(data.results);
@@ -43,7 +43,7 @@
 </script>
 <body>
 <div class="selectback">
-    <a class="nav_button on" href="#">&nbsp; Demo 1</a>  <a class="nav_button off" href="../demo2/demo2.html">&rarr; Demo 2</a> <a class="nav_button off" href="http://flyingdog.de/nhp/blog/cards/How_to_Cards_Desktop.php">&rarr; Article</a>
+    <a class="nav_button on" href="#">&nbsp; Demo 1</a>  <a class="nav_button off" href="../demo2/demo2.html">&rarr; Demo 2</a> <a class="nav_button off" href="http://www.flyingdog.de/nhp/blog/cards/How_to_Cards_Desktop.php">&rarr; Article</a>
     <span class="infotext">double click on card to zoom</span>
 </div>
 
